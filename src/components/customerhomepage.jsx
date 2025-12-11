@@ -21,7 +21,7 @@ const CardPaymentForm = React.memo(function CardPaymentForm({ amountCents, onSuc
     if (!stripe || !elements) return alert("Stripe not ready");
     setLoading(true);
     try {
-      const apiUrl = import.meta.env.VITE_STRIPE_SERVER_URL || "http://localhost:4242";
+      const apiUrl = import.meta.env.VITE_STRIPE_SERVER_URL || "/api";
       const payload = { 
         amount: amountCents, 
         currency: "usd",
